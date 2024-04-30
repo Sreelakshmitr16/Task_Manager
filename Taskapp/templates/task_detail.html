@@ -1,0 +1,46 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+{% block style_block%}
+<style>
+  table{
+    width: 400px;
+    height: 200px;
+    box-shadow: 5px 10px 5px black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 150px;
+
+    
+  }
+  th,td{
+    text-align: center;
+    border: 1px dotted black;
+    }
+
+  body{
+    background-attachment: fixed;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #ffffff 1%, #E0C3FC 92%);;
+  }
+</style>
+     {%endblock%}
+    
+
+    <h3 style="text-align: center">Task</h3>
+        <table border="1" align="center">
+          <tr style="background-color: cadetblue;">
+            <th>TITLE</th>
+            <th>STATUS</th>
+            <th>CREATED DATE</th>
+          </tr>
+          <tr>
+            <td>{{data.title}}</td>
+            <td>{{data.status}}</td>
+            <td>{{data.date}}</td>
+          </tr>
+        </table>
+        {%endblock%}
+
+
+        

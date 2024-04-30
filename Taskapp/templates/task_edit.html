@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block style_block%}
+<style>
+    body{
+        background-color:#8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #ffffff 1%, #E0C3FC 92%);
+background-attachment: fixed;
+    }
+
+    #button{
+        margin-left: 150px;
+    }
+    #a{
+        box-shadow: 5px 10px 5px 1px black;
+        border-radius: 15px;
+    }
+</style>
+{%endblock%}
+
+{%block main_block%}
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 p-4 border border-primary " style="background-color:#8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #ffffff 1%, #E0C3FC 92%);
+            ;margin-top: 50px;" id="a">
+                <h1 class="text-center fw-b">Enter Tasks</h1>
+                <form action="" method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <button type="submit" class="btn  btn-primary" id="button">Change</button>
+                </form>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    {%endblock%}
